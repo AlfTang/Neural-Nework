@@ -1,9 +1,9 @@
 Neural-Nework
 =============
 
-Programming Exercise 3 in Machine Learning course by Andrew Ng on Coursera.  
+This repo is the programming Exercise 3 & 4 about neural network in Machine Learning course by Andrew Ng on Coursera.  
 The course info can be found here https://class.coursera.org/ml-004/class/index.  
-The details of this assignment is described in ex3.pdf
+The details of this assignment is described in ex3.pdf and ex4.pdf
 
 The codes are written by Octave.  
 For further info of Octave please see http://www.gnu.org/software/octave/
