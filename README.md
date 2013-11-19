@@ -2,6 +2,8 @@ Neural-Nework
 =============
 
 This repo is the programming Exercise 3 & 4 about neural network in Machine Learning course by Andrew Ng on Coursera.  
+Ex3 is a neural network to recognise hand-written digits by one-vs-all logistic regression.  
+Ex4 is a neural network to recognise hand-written digits by backpropagation algorithm.  
 The course info can be found here https://class.coursera.org/ml-004/class/index.  
 The details of this assignment is described in ex3.pdf and ex4.pdf
 
