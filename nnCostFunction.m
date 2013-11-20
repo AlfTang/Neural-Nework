@@ -91,9 +91,9 @@ Theta1 = Theta1(:, 2:end);
 Theta2 = Theta2(:, 2:end);
 
 %tic
-J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m;
+J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m...
+  + lambda/2/m*(Theta1(:)' * Theta1(:) + Theta2(:)' * Theta2(:));
 %toc
-%+ lambda/2/m*theta(2:end)'*theta(2:end);
 
 % -------------------------------------------------------------
 
