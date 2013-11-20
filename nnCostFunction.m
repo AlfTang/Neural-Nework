@@ -76,6 +76,8 @@ for j=1:m
     h_theta(:,j) = sigmoid(Theta2*a_hidden(j,:)'); 
 end
 
+% Initialise the mapped y
+yMapped = zeros(num_labels, m);
 
 
 
