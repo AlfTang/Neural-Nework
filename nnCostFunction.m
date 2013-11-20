@@ -94,6 +94,18 @@ end
 
 
 
+% Using unrolled yMapped and h_theta to compute J takes 0.006541 seconds,
+% while using element-wise multiplication to compute J takes 0.0033979 seconds,
+% which is faster twice than unrolled mathod
+
+%tic
+%J = (-yMapped(:)' * log(h_theta(:)) - (1-yMapped(:))' * log(1-h_theta(:)))/m
+%toc
+
+%tic
+J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m;
+%toc
+%+ lambda/2/m*theta(2:end)'*theta(2:end);
 
 % -------------------------------------------------------------
 
