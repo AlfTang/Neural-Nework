@@ -22,6 +22,8 @@ W = zeros(L_out, 1 + L_in);
 % Bound for random number.  Algorithm is given by the footnote in p7 of ex4.pdf
 epsilon_init = sqrt(6)/(sqrt(L_in) + sqrt(L_out));
 
+% Randomly initialise Theta in the range of +- epsilon_init
+W = 2*epsilon_init*rand(size(W,1), size(W,2)) - epsilon_init;
 
 
 
