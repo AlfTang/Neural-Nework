@@ -79,6 +79,9 @@ end
 % Initialise the mapped y
 yMapped = zeros(num_labels, m);
 
+for k = 1:m
+    yMapped(y(k), k) = 1; 
+end
 
 
 
