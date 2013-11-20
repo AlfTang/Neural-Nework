@@ -64,6 +64,10 @@ Theta2_grad = zeros(size(Theta2));
 
 X = [ones(m,1) X]; % Add a column of 1's to the X matrix
 
+% output from input layer
+for i=1:m 
+    a_hidden(:,i) = sigmoid(Theta1*X(i,:)'); 
+end
 
 
 
