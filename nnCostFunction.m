@@ -71,6 +71,10 @@ end
 
 a_hidden = [ones(m,1) a_hidden'];
 
+% output from hidden layer
+for j=1:m 
+    h_theta(:,j) = sigmoid(Theta2*a_hidden(j,:)'); 
+end
 
 
 
