@@ -69,6 +69,7 @@ for i=1:m
     a_hidden(:,i) = sigmoid(Theta1*X(i,:)'); 
 end
 
+a_hidden = [ones(m,1) a_hidden'];
 
 
 
