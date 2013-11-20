@@ -87,6 +87,9 @@ end
 %J = (-yMapped(:)' * log(h_theta(:)) - (1-yMapped(:))' * log(1-h_theta(:)))/m
 %toc
 
+Theta1 = Theta1(:, 2:end);
+Theta2 = Theta2(:, 2:end);
+
 %tic
 J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m;
 %toc
