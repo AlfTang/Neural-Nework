@@ -105,4 +105,25 @@ J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m...
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
 
 
+% Compute gradient by backpropagation
+
+% Step 2: Compute delta of output layer
+delta_3 = h_theta - yMapped;
+
+% Step 3: Compute delta of hidden layer
+delta_2 = Theta2'*delta_3;
+delta_2 = delta_2(2:end , :);
+delta_2 = delta_2 .* sigmoidGradient(Theta1*X');
+
+% Step 4: Compute Delta for every layer
+Delta_1 = delta_2*X;
+Delta_2 = delta_3*a_hidden;
+
+% Step 5: Compute unregularized gradient by backpropagation
+grad = [Delta_1(:); Delta_2(:)]/m;
+
+% Step 6: Regularise gradient
+Theta1(:,1) = 0;
+Theta2(:,1) = 0;
+grad = [Delta_1(:); Delta_2(:)]/m + lambda*[Theta1(:); Theta2(:)]/m;
 end
