@@ -93,7 +93,8 @@ Theta2NoBiasTerm = Theta2(:, 2:end);
 
 %tic
 J = sum(sum(-yMapped .* log(h_theta) - (1-yMapped) .* log(1-h_theta)))/m...
-  + lambda/2/m*(Theta1(:)' * Theta1(:) + Theta2(:)' * Theta2(:));
+  + lambda/2/m*(Theta1NoBiasTerm(:)' * Theta1NoBiasTerm(:)... 
+  + Theta2NoBiasTerm(:)' * Theta2NoBiasTerm(:));
 %toc
 
 % -------------------------------------------------------------
